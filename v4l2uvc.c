@@ -83,10 +83,10 @@ init_videoIn(struct vdIn *vd, char *device, int width, int height, int fps,
     vd->videodevice = NULL;
     vd->status = NULL;
     vd->pictName = NULL;
-    vd->videodevice = (char *) calloc(1, 16 * sizeof(char));
+    vd->videodevice = (char *) calloc(1, 64 * sizeof(char));
     vd->status = (char *) calloc(1, 100 * sizeof(char));
     vd->pictName = (char *) calloc(1, 80 * sizeof(char));
-    snprintf(vd->videodevice, 12, "%s", device);
+    snprintf(vd->videodevice, 63, "%s", device);
     printf("video %s \n", vd->videodevice);
     vd->toggleAvi = 0;
     vd->avifile = NULL;
